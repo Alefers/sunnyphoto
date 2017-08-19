@@ -1,0 +1,28 @@
+@font-face {
+  font-family: Intro;
+  src: url(Intro/Intro.otf) format("opentype");
+}
+@font-face {
+  font-family: IntroBold;
+  src: url(Intro/IntroBold.otf) format("opentype");
+}
+@font-face {
+  font-family: IntroBold1;
+  src: url(Intro/IntroBold1.otf) format("opentype");
+}
+@font-face {
+  font-family: IntroBlack;
+  src: url(Intro/IntroBlack.otf) format("opentype");
+}
+@font-face {
+  font-family: IntroBlack1;
+  src: url(Intro/IntroBlack1.otf) format("opentype");
+}
+@font-face {
+  font-family: IntroLight;
+  src: url(Intro/IntroLight.otf) format("opentype");
+}
+@font-face {
+  font-family: IntroSemiBold;
+  src: url(Intro/IntroSemiBold.otf) format("opentype");
+}

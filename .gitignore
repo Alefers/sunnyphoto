@@ -1,0 +1,8 @@
+admin/
+images/
+temp/
+admin_chck.php
+tanjanashadmin.php
+*.png
+*.jpg
+nbproject/
