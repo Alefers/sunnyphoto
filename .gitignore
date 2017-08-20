@@ -1,7 +1,7 @@
 *~
 images/
 temp/
-db_con.php
+scripts/db_con.php
 *admin*
 *.png
 *.jpg

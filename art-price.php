@@ -23,16 +23,16 @@ include 'scripts/db_con.php';
     <header>
       <div class="hdr">
         <img class="hdr-logo" src="design/<?php echo $page?>-logo.png" alt="">
-        <div class="hdr-capt">
+        <h1>
           МЕСТА ДЛЯ СВАДЕБНЫХ ФОТОСЕССИЙ ЗА РИГОЙ
-        </div>
+        </h1>
       </div>
     </header>
-    <div id="article">
-      <div class="art-h">
+    <article>
+      <h2>
         ЕСЛИ ВЫ ВЫБРАЛИ ДЛЯ ПРОГУЛКИ МЕСТА ЗА ГОРОДОМ:
-      </div>
-      <ul class="art-ul">
+      </h2>
+      <ul>
         <li>учтите, что если вы едете на лимузине, время на дорогу увеличивается</li>
         <li>обязательно заранее узнайте маршрут, распечатайте <a href="#" class="art-a">карту</a></li>
         <li>если с вами на других машинах едут гости, выдайте каждому водителю точную инструкцию, как доехать</li>
@@ -41,71 +41,68 @@ include 'scripts/db_con.php';
         <li>выбирайте места, откуда будет удобно ехать в банкетный зал</li>
         <li>планируйте время так, чтобы на саму прогулку по месту осталось минимум 2 часа</li>
       </ul>
-      <div class="art-p">
+      <p class="p-left">
         Ниже обзор красивых мест для фотосессии.
-      </div>
+      </p>
       <div class="dot-box big">
         <div class="dot">
           1
         </div>
       </div>
-      <div class="dot-box small">
-        <div class="dot"></div>
-      </div>
-      <div class="art-h">
+      <h2>
         САУЛКРАСТЫ, БЕЛАЯ ДЮНА
-      </div>
+      </h2>
       <img class="art-img" src="temp/art-1.jpg">
-      <div class="art-p">
+      <p class="p-left">
         Шикарное место для прогулки и фотосессии. Находится примерно в получасе езды от центра Риги.
         Красивая деревянная дорожка, чистенький пляж, вода, лес – фотографу есть где развернуться.
         Удобно, что есть беседка, где, если она свободна, можно сделать небольшой фуршет и оставить гостей отдыхать во время фотосессии.
         При желании на смотровой площадке можно устроить саму церемонию.
         Удобно, что летом там не так много людей, как в Юрмале или Вецаки, что очень хорошо для свадебных фотографий.
         Есть платная парковка.
-      </div>
+      </p>
       <div class="dot-box big">
         <div class="dot">
           2
         </div>
       </div>
-      <div class="art-h">
+      <h2>
         ЮРМАЛА, ПЛЯЖ
-      </div>
+      </h2>
       <img class="art-img" src="temp/art-2.jpg">
-      <div class="art-p">
+      <p class="p-left">
         Когда хочется фотографий на море, можно выбрать Юрмалу.
         Стоит учесть, что летом там очень много людей, поэтому лучше выбирать пляжи, где отдыхающих будет чуть меньше.
         Например, на пляже рядом с рестораном «36. linija» народу будет меньше, чем в Дзинтари.
         При выборе места убедитесь , что недалеко есть парковка.
-      </div>
-      <div class="art-space" data-l="0.04"></div>
-      <div class="art-h">
+      </p>
+      <div class="space" data-l="0.04"></div>
+      <h2>
         КОМПЛЕКТ "МИНИ"<br>СТОИМОСТЬ: 150 EUR
-      </div>
+      </h2>
       <img class="art-img" src="temp/art-1.jpg">
-      <div class="art-p-mid">
+      <p class="p-mid">
         фотосъёмка продолжительностью до 6 часов
-      </div>
+      </p>
       <div class="dot-box small">
         <div class="dot"></div>
       </div>
-      <div class="art-p-mid">
+      <p class="p-mid">
         примерно 400 фотографий
-      </div>
+      </p>
       <div class="dot-box small">
         <div class="dot"></div>
       </div>
-      <div class="art-p-mid">
+      <p class="p-mid">
         диск в индивидуальной обложке
-      </div>
+      </p>
       <div class="dot-box small">
         <div class="dot"></div>
       </div>
-      <div class="art-p-mid">
+      <p class="p-mid">
         срок обработки 4-6 недель
-      </div>
-    </div>
+      </p>
+    </article>
     <div id="links">
       <a href="#" class="link-img-box"><img class="link-img" src="design/4.jpg"></a>
       <div class="link" style="text-align: left;">
@@ -113,7 +110,7 @@ include 'scripts/db_con.php';
           ПРЕДЫДУЩАЯ
         </div>
         <a href="#" class="link-hdr">
-        В ОЖИДАНИИ
+          В ОЖИДАНИИ
         </a>
       </div>
       <div class="link" style="text-align: right;">
@@ -159,7 +156,12 @@ include 'scripts/price-menu-links.php';
         </div>
     </nav>
     <div id="lang">
-      
+      <div class="lang-itm">
+        <img src="design/flag_lv.png" alt="LV">
+      </div>
+      <div class="lang-itm">
+        <img src="design/flag_ru.png" alt="RU">
+      </div>
     </div>
     <script>
 $('.anim').mouseover(function() {
@@ -174,16 +176,18 @@ $('.anim').mouseout(function() {
     marginTop: '25%'
   }, 300).delay(1).hide(0);
 });
-var hc = 13.8; // высота попап меню вычисляется: ширина экрана делить на это число 
+var hc = 13.8; // отношение ширины к высоте меню 
 var ppHeightCoef = hc;
 $(window).scroll(function() {
   if (($(this).scrollTop() > ($(this).width()/5)) && ppHeightCoef < 15) {
     $('.pp-logo img').animate({width: "40%"}, 200);
     ppHeightCoef = 15;
+    $('#lang').hide(100);
   }
   if (($(this).scrollTop() < ($(this).width()/5)) && ppHeightCoef > hc) {
     $('.pp-logo img').animate({width: "70%"}, 200);
     ppHeightCoef = hc;
+    $('#lang').show(100);
   }
 });
 $(document).ready(function() {
@@ -194,15 +198,12 @@ $(window).resize(function() {
   var ppPaddingTop = $(this).width()/13.8;
   $('header').css({paddingTop: ppPaddingTop});
   $('.hdr-<?php echo $page;?>-logo').height($('.hdr-<?php echo $page;?>-logo').width());
-  $('.dot-small').height($('.dot-small').width());
-  $('.dot-big').height($('.dot-big').width());
-  $('.art-link-txt').height($('.art-link-img').height());
   $('.art-space').each(function() {
     var l = $(this).data('l');
     $(this).height($(window).width()*l);
   });
 });
-$('.set-lang').click(function() {
+$('.lang-itm').click(function() {
   $.post(
     "scripts/lang_c.php",
     {lang: $(this).data('lang')},
