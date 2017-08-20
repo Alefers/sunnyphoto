@@ -1,8 +1,8 @@
-admin/
+*~
 images/
 temp/
-admin_chck.php
-tanjanashadmin.php
+db_con.php
+*admin*
 *.png
 *.jpg
 nbproject/

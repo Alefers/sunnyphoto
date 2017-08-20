@@ -17,7 +17,3 @@
       наверх
    </a>
 </div>
-<div class="go_down">
-   <img src="../design/go_down.png">
-</div>
-

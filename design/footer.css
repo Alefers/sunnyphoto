@@ -48,14 +48,3 @@
          display: block;
          margin: 0 auto .3%;
       }
-.go_down {
-   position: fixed;
-   bottom: 0;
-   left: 48.5%;
-   width: 3%;
-   animation: bounce 2s infinite;
-}
-   .go_down img {
-      display: block;
-      width: 100%;
-   }
