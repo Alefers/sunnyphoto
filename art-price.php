@@ -12,7 +12,6 @@ include 'scripts/db_con.php';
     <meta charset="utf-8">
     <title>Свадебный и семейный фотограф</title>
     <link rel="stylesheet" href="design/art.css" />
-    <link rel="stylesheet" href="design/footer.css" />
     <link rel="stylesheet" href="design/fonts.css" />
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
     <!--<meta content="http://alefers.lv/nika/design/og_image.jpg" property="og:image">-->
@@ -20,7 +19,7 @@ include 'scripts/db_con.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   </head>
   <body>
-    <header>
+    <header id="up">
       <div class="hdr">
         <img class="hdr-logo" src="design/<?php echo $page?>-logo.png" alt="">
         <h1>
@@ -195,7 +194,7 @@ $(document).ready(function() {
 });
 $(window).resize(function() {
   $('header').height($(this).width()/3.4321);
-  var ppPaddingTop = $(this).width()/13.8;
+  var ppPaddingTop = $(this).width()/14;
   $('header').css({paddingTop: ppPaddingTop});
   $('.hdr-<?php echo $page;?>-logo').height($('.hdr-<?php echo $page;?>-logo').width());
   $('.art-space').each(function() {
