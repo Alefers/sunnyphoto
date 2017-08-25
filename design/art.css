@@ -13,17 +13,19 @@ a {
 header {
    background: url(../temp/art-hdr.jpg) bottom no-repeat;
    background-size: contain;
+   height: 28.8vw;
+   padding-top: 6.9vw;
 }
   .hdr {
     display: flex;
     background: rgba(0,0,0,.2);
     height: 100%;
     justify-content: center;
-    flex-flow: column nowrap;
+    flex-direction: column;
     text-align: center;
   }
   .hdr-logo {
-    width: 4%;
+    width: 4vw;
     margin: 0 auto 1%;
   }
   h1 {
@@ -36,7 +38,7 @@ header {
 article {
   display: flex;
   align-items: center;
-  flex-flow: column nowrap;
+  flex-direction: column;
   padding-top: 3%;
   color: #333;
 }
@@ -110,7 +112,7 @@ article {
 #links {
   margin: 4% 6% 6%;
   display: flex;
-  flex-flow: row nowrap;
+  flex-direction: row;
   align-items:center;
   justify-content: space-between;
 }
@@ -178,7 +180,7 @@ nav {
     width: 96%;
     background: #fb0;
     margin: 30px auto 0;
-    box-shadow: 0 0 2px 2px rgba(0,0,0,0.3);
+    box-shadow: 0 0 .2vw .2vw rgba(0,0,0,0.3);
     box-sizing: border-box;
     overflow: hidden;
     opacity: 0;
@@ -201,15 +203,15 @@ nav {
   position: fixed;
   top: 0;
   right: 0;
-  padding: 0 5px 0 0;
 }
   .lang-itm {
-    display: inline-block;
-    margin: 3px 3px 0 0;
     cursor: pointer;
     width: 2.5vw;
+    height: 1.6vw;
+    margin: .3vw .3vw 0 0;
   }
     .lang-itm img {
+      box-sizing: border-box;
       width: 100%;
       border: 1px solid #ccc;
     }

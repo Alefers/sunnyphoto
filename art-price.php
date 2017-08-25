@@ -75,7 +75,7 @@ include 'scripts/db_con.php';
         Например, на пляже рядом с рестораном «36. linija» народу будет меньше, чем в Дзинтари.
         При выборе места убедитесь , что недалеко есть парковка.
       </p>
-      <div class="space" data-l="0.04"></div>
+      <div style="height: 2vw;"></div>
       <h2>
         КОМПЛЕКТ "МИНИ"<br>СТОИМОСТЬ: 150 EUR
       </h2>
@@ -188,19 +188,6 @@ $(window).scroll(function() {
     ppHeightCoef = hc;
     $('#lang').show(100);
   }
-});
-$(document).ready(function() {
-  $(window).resize();
-});
-$(window).resize(function() {
-  $('header').height($(this).width()/3.4321);
-  var ppPaddingTop = $(this).width()/14;
-  $('header').css({paddingTop: ppPaddingTop});
-  $('.hdr-<?php echo $page;?>-logo').height($('.hdr-<?php echo $page;?>-logo').width());
-  $('.art-space').each(function() {
-    var l = $(this).data('l');
-    $(this).height($(window).width()*l);
-  });
 });
 $('.lang-itm').click(function() {
   $.post(
