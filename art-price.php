@@ -144,8 +144,6 @@ include 'scripts/price-menu-links.php';
       </div>
       <div class="pp-logo">
         <img src="design/logo-b.png" onclick="window.location = 'index.php'">
-<!--            <span class="pp-btn" data-lang="lv">LV</span>
-            <span class="pp-btn" data-lang="ru">RU</span> -->
       </div>
       <div class="pp-el">
         <a href="article.php" class="pp-a">СТАТЬИ</a>
@@ -154,14 +152,8 @@ include 'scripts/price-menu-links.php';
           <a href="#kont" class="pp-a">КОНТАКТЫ</a>
         </div>
     </nav>
-    <div id="lang">
-      <div class="lang-itm">
-        <img src="design/flag_lv.png" alt="LV">
-      </div>
-      <div class="lang-itm">
-        <img src="design/flag_ru.png" alt="RU">
-      </div>
-    </div>
+    <div class="lang-itm lang-lv" data-lang="lv"></div>
+    <div class="lang-itm lang-ru" data-lang="lv"></div>
     <script>
 $('.anim').mouseover(function() {
   $(this).children('.pp-gal').show().stop(true).animate({
@@ -181,12 +173,12 @@ $(window).scroll(function() {
   if (($(this).scrollTop() > ($(this).width()/5)) && ppHeightCoef < 15) {
     $('.pp-logo img').animate({width: "40%"}, 200);
     ppHeightCoef = 15;
-    $('#lang').hide(100);
+    $('.lang-itm').hide(100);
   }
   if (($(this).scrollTop() < ($(this).width()/5)) && ppHeightCoef > hc) {
     $('.pp-logo img').animate({width: "70%"}, 200);
     ppHeightCoef = hc;
-    $('#lang').show(100);
+    $('.lang-itm').show(100);
   }
 });
 $('.lang-itm').click(function() {

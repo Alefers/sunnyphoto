@@ -13,7 +13,7 @@
    по эл. почте: <a class="ftr_a" href="#">sunnyphoto@inbox.lv</a><br>
    или оставив заявку на моей страничке в <a class="ftr_a" href="https://www.facebook.com/sunnyphotolv/">Facebook</a>
    <a class="ftr_arrow_box ftr_a" href="#up">
-      <img class="ftr_arrow" src="../design/up_arrow.png">
+      <img class="ftr_arrow" src="design/up_arrow.png">
       наверх
    </a>
 </footer>

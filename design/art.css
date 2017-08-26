@@ -104,7 +104,7 @@ article {
       display: flex;
       align-items:center;
       justify-content: center;
-      border-radius: 55%;
+      border-radius: 50%;
       background-color: #fb0;
       font: 1.8vw IntroBold1;
       color: #FFF;
@@ -138,7 +138,8 @@ article {
     padding: 0;
   }
     .link-img {
-      width: 94%;
+      box-sizing: border-box;
+      width: 100%;
       border: 1px solid #ccc;
     }
 nav {
@@ -199,22 +200,27 @@ nav {
     .pp-gal a:last-child {
       margin: 0;
     }
-#lang {
+.lang-itm {
   position: fixed;
-  top: 0;
-  right: 0;
+  top: .3vw;
+  cursor: pointer;
+  width: 2.5vw;
+  box-shadow: 0 0 1px 1px #aaa;
 }
-  .lang-itm {
-    cursor: pointer;
-    width: 2.5vw;
-    height: 1.6vw;
-    margin: .3vw .3vw 0 0;
+  .lang-lv {
+    height: .32vw;
+    border-top: .62vw solid #8a1923;
+    border-bottom: .62vw solid #8a1923;
+    background: #fff;
+    right: .3vw;
   }
-    .lang-itm img {
-      box-sizing: border-box;
-      width: 100%;
-      border: 1px solid #ccc;
-    }
+  .lang-ru {
+    height: .5vw;
+    border-top: .5vw solid #fff;
+    border-bottom: .5vw solid #263C80;
+    background: #D72727;
+    right: 3.1vw;
+  }
 footer {
   background: #fb0;
   padding: 5% 0 2%;
@@ -252,3 +258,55 @@ footer {
          display: block;
          margin: 0 auto .3%;
       }
+
+@media screen and (max-width: 800px) {
+  /* раздел статьи article */
+  h2, ul, .p-left, .art-img {
+    margin: 0 auto 4%;
+  }
+  h2 {
+    font: 4vw IntroBold1;
+    width: 70%;
+  }
+  ul {
+    font: 3.4vw Intro;
+    width: 85%;
+  }
+  .p-left {
+    font: 3.4vw Intro;
+    width: 85%;
+  }
+  .p-mid {
+    font: 3.4vw Intro;
+    width: 85%;
+  }
+  .art-img {
+    width: 95%;
+  }
+  .big {
+    padding: 3.5vw;
+  }
+  .small {
+    padding: 1.5vw;
+  }
+    .dot {
+      font: 3vw IntroBold1;
+    }
+  /* раздел ссылок под статьёй */
+  #links {
+    margin: 4% 2% 6%;
+  }
+  .link {
+    width: 28%;
+  }
+    .link-derection {
+      font: 2vw Intro;
+      color: #fb0;
+    }
+    .link-hdr {
+      font: 2.5vw Intro;
+    }
+  .link-img-box {
+    width: 20%;
+  }
+}
