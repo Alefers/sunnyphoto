@@ -19,14 +19,16 @@ include 'scripts/db_con.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   </head>
   <body>
-    <header id="up">
-      <div class="hdr">
-        <img class="hdr-logo" src="design/<?php echo $page?>-logo.png" alt="">
-        <h1>
-          МЕСТА ДЛЯ СВАДЕБНЫХ ФОТОСЕССИЙ ЗА РИГОЙ
-        </h1>
-      </div>
-    </header>
+    <div id="hdr-kostil">
+      <header id="up">
+        <div class="hdr">
+          <img class="hdr-logo" src="design/<?php echo $page?>-logo.png" alt="">
+          <h1>
+            МЕСТА ДЛЯ СВАДЕБНЫХ ФОТОСЕССИЙ ЗА РИГОЙ
+          </h1>
+        </div>
+      </header>
+    </div>  
     <article>
       <h2>
         ЕСЛИ ВЫ ВЫБРАЛИ ДЛЯ ПРОГУЛКИ МЕСТА ЗА ГОРОДОМ:
@@ -152,8 +154,14 @@ include 'scripts/price-menu-links.php';
           <a href="#kont" class="pp-a">КОНТАКТЫ</a>
         </div>
     </nav>
-    <div class="lang-itm lang-lv" data-lang="lv"></div>
-    <div class="lang-itm lang-ru" data-lang="lv"></div>
+    <div class="lang">
+      <div class="lang-itm" data-lang="lv">
+        <img src="design/flag_lv.png" alt="lv">
+      </div>
+      <div class="lang-itm" data-lang="lv">
+        <img src="design/flag_ru.png" alt="ru">
+      </div>
+    </div>
     <script>
 $('.anim').mouseover(function() {
   $(this).children('.pp-gal').show().stop(true).animate({
@@ -173,12 +181,12 @@ $(window).scroll(function() {
   if (($(this).scrollTop() > ($(this).width()/5)) && ppHeightCoef < 15) {
     $('.pp-logo img').animate({width: "40%"}, 200);
     ppHeightCoef = 15;
-    $('.lang-itm').hide(100);
+    $('.lang').hide(100);
   }
   if (($(this).scrollTop() < ($(this).width()/5)) && ppHeightCoef > hc) {
     $('.pp-logo img').animate({width: "70%"}, 200);
     ppHeightCoef = hc;
-    $('.lang-itm').show(100);
+    $('.lang').show(100);
   }
 });
 $('.lang-itm').click(function() {
