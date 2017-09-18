@@ -1,6 +1,7 @@
 <?php
 session_start();
 include 'scripts/db_con.php';
+include 'scripts/header.php';
 if (!isset($_SESSION['lang'])) {
    $_SESSION['lang'] = 'ru';
 }
@@ -15,57 +16,14 @@ if (mysqli_num_rows($sql_section)) {
    $bg = 'design/default-bg.jpg';
    $title = 'ЭТОТ РАЗДЕЛ ПУСТ ИЛИ НЕ СУЩЕСТВУЕТ';
 }
+loadHeader('gal');
 ?>
-<!doctype html>
-<html>
-   <head>
-      <meta charset="utf-8">
-      <title>Свадебный и семейный фотограф</title>
-      <link rel="stylesheet" href="design/gal.css" type="text/css" />
-      <link rel="stylesheet" href="design/footer.css" type="text/css" />
-      <link rel="stylesheet" href="design/fonts.css" type="text/css" />
-      <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
-      <!--<meta content="http://alefers.lv/nika/design/og_image.jpg" property="og:image">-->
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-   </head>
-   <body>
-      <div id="header" style="background: url(<?php echo $bg; ?>) no-repeat; background-size: contain;">
-         <div class="hdr-menu">
-            <div class="hdr-menu-el anim">
-               ГАЛЕРЕЯ
-               <div class="gal">
-<?php
-include 'scripts/gal-menu-links.php';
-?>
-               </div>
-            </div>
-            <div class="hdr-menu-el anim">
-               ЦЕНЫ И УСЛУГИ
-               <div class="gal">
-<?php
-include 'scripts/price-menu-links.php';
-?>
-               </div>
-            </div>
-            <div class="hdr-menu-logo">
-               <img src="design/logo.png" onclick="window.location = 'index.php'">
-               <div class="hdr-lang">
-                  <span class="hdr-lang-btn<?php if ($lang === 'ru') {echo ' set-lang';}?>" data-lang="lv">LV</span>
-                  <span class="hdr-lang-btn<?php if ($lang === 'lv') {echo ' set-lang';}?>" data-lang="ru">RU</span>
-               </div>
-            </div>
-            <div class="hdr-menu-el">
-               <a href="article.php" class="hdr-menu-a">СТАТЬИ</a>
-            </div>
-            <div class="hdr-menu-el">
-               <a href="#kont" class="hdr-menu-a">КОНТАКТЫ</a>
-            </div>
-            <div class="hdr-capt hdr-ct-w">
-               <?php echo $title; ?>
-            </div>
-         </div>
+  <body>
+    <header style="background: url(<?php echo $bg; ?>) no-repeat; background-size: contain;">
+      <div class="hdr-capt hdr-ct-w">
+        <?php echo $title; ?>
       </div>
+    </header>
       <div id="content">
 <?php
 $sql_block = mysqli_query($db, "SELECT * FROM sp_blocks WHERE b_show = 1 AND b_img > 0 ORDER BY b_id DESC LIMIT 6 ");
@@ -90,39 +48,35 @@ if (mysqli_num_rows($sql_block)) {
          <span class="more">ПОСМОТРЕТЬ ЕЩЁ</span>
       </div>
 <?php
-include 'scripts/footer_abme.php';
+include 'scripts/footer.php';
 ?>
-      <div id="popup-menu">
-         <div class="pp-el anim">
-            ГАЛЕРЕЯ
-            <div class="gal">
+    <nav class="gal-nav">
+      <div class="pp-el anim">
+        ГАЛЕРЕЯ
+        <div class="pp-gal">
 <?php
 include 'scripts/gal-menu-links.php';
 ?>
-            </div>
-         </div>
-         <div class="pp-el anim">
-            ЦЕНЫ И УСЛУГИ
-            <div class="gal">
+        </div>
+      </div>
+      <div class="pp-el anim">
+        ЦЕНЫ И УСЛУГИ
+        <div class="pp-gal">
 <?php
 include 'scripts/price-menu-links.php';
 ?>
-            </div>
-         </div>
-         <div class="pp-logo">
-            <img src="design/logo-b.png">
-            <div class="pp-lang">
-               <span class="pp-btn<?php if ($lang === 'ru') {echo ' set-lang';}?>" data-lang="lv">LV</span>
-               <span class="pp-btn<?php if ($lang === 'lv') {echo ' set-lang';}?>" data-lang="ru">RU</span>
-            </div>
-         </div>
-         <div class="pp-el">
-            <a href="article.php" class="pp-a">СТАТЬИ</a>
-         </div>
-         <div class="pp-el">
-            <a href="#kont" class="pp-a">КОНТАКТЫ</a>
-         </div>
+        </div>
       </div>
+      <div class="pp-logo">
+        <img src="design/logo-b.png" onclick="window.location = 'index.php'">
+      </div>
+      <div class="pp-el">
+        <a href="article.php" class="pp-a">СТАТЬИ</a>
+      </div>
+        <div class="pp-el">
+          <a href="#kont" class="pp-a">КОНТАКТЫ</a>
+        </div>
+    </nav>
       <script>
          $(document).ready(function() {
             $(window).resize();

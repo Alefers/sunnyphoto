@@ -5,24 +5,14 @@ if (!isset($_SESSION['lang'])) {
 }
 $lang = $_SESSION['lang'];
 include 'scripts/db_con.php';
+include 'scripts/header.php';
+loadHeader('art');
 ?>
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Свадебный и семейный фотограф</title>
-    <link rel="stylesheet" href="design/art.css" />
-    <link rel="stylesheet" href="design/fonts.css" />
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
-    <!--<meta content="http://alefers.lv/nika/design/og_image.jpg" property="og:image">-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  </head>
   <body>
     <div id="hdr-kostil">
       <header id="up">
         <div class="hdr">
-          <img class="hdr-logo" src="design/<?php echo $page?>-logo.png" alt="">
+          <img class="hdr-logo" src="design/<?php echo $page?>-logo.png" alt="art-logo">
           <h1>
             МЕСТА ДЛЯ СВАДЕБНЫХ ФОТОСЕССИЙ ЗА РИГОЙ
           </h1>
@@ -53,7 +43,7 @@ include 'scripts/db_con.php';
       <h2>
         САУЛКРАСТЫ, БЕЛАЯ ДЮНА
       </h2>
-      <img class="art-img" src="temp/art-1.jpg">
+      <img class="art-img" src="temp/art-1.jpg" alt="места для свадебных фотосессий за Ригой">
       <p class="p-left">
         Шикарное место для прогулки и фотосессии. Находится примерно в получасе езды от центра Риги.
         Красивая деревянная дорожка, чистенький пляж, вода, лес – фотографу есть где развернуться.
@@ -70,7 +60,7 @@ include 'scripts/db_con.php';
       <h2>
         ЮРМАЛА, ПЛЯЖ
       </h2>
-      <img class="art-img" src="temp/art-2.jpg">
+      <img class="art-img" src="temp/art-2.jpg" alt="места для свадебных фотосессий за Ригой">
       <p class="p-left">
         Когда хочется фотографий на море, можно выбрать Юрмалу.
         Стоит учесть, что летом там очень много людей, поэтому лучше выбирать пляжи, где отдыхающих будет чуть меньше.
@@ -81,7 +71,7 @@ include 'scripts/db_con.php';
       <h2>
         КОМПЛЕКТ "МИНИ"<br>СТОИМОСТЬ: 150 EUR
       </h2>
-      <img class="art-img" src="temp/art-1.jpg">
+      <img class="art-img" src="temp/art-1.jpg" alt="комплект мини">
       <p class="p-mid">
         фотосъёмка продолжительностью до 6 часов
       </p>
@@ -105,7 +95,7 @@ include 'scripts/db_con.php';
       </p>
     </article>
     <div id="links">
-      <a href="#" class="link-img-box"><img class="link-img" src="design/4.jpg"></a>
+      <a href="#" class="link-img-box"><img class="link-img" src="design/4.jpg" alt="В одидании ребёнка"></a>
       <div class="link" style="text-align: left;">
         <div class="link-derection">
           ПРЕДЫДУЩАЯ
@@ -122,12 +112,12 @@ include 'scripts/db_con.php';
           ЧТО ВЗЯТЬ С СОБОЙ НА ПРОГУЛКУ
         </a>
       </div>
-      <a href="#" class="link-img-box"><img class="link-img" src="design/3.jpg"></a>
+      <a href="#" class="link-img-box"><img class="link-img" src="design/3.jpg" alt="Что взять с собой на прогулку на свадьбе"></a>
     </div>
 <?php
 include 'scripts/footer.php';
 ?>
-    <nav>
+    <nav class="art-nav">
       <div class="pp-el anim">
         ГАЛЕРЕЯ
         <div class="pp-gal">
@@ -145,7 +135,7 @@ include 'scripts/price-menu-links.php';
         </div>
       </div>
       <div class="pp-logo">
-        <img src="design/logo-b.png" onclick="window.location = 'index.php'">
+        <img src="design/logo-b.png" onclick="window.location = 'index.php'" alt="logo">
       </div>
       <div class="pp-el">
         <a href="article.php" class="pp-a">СТАТЬИ</a>

@@ -98,7 +98,7 @@ if (mysqli_num_rows($sql_block)) {
          <span class="more">ПОСМОТРЕТЬ ЕЩЁ</span>
       </div>
 <?php
-include 'scripts/footer_abme.php';
+include 'scripts/footer.php';
 ?>
       <div id="popup-menu">
          <div class="pp-el anim">
